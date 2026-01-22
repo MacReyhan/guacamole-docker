@@ -30,14 +30,13 @@ I have installed Apache Guacamole using Docker Compose. This setup includes:
 1. Open your browser to [http://localhost:8080/guacamole/](http://localhost:8080/guacamole/).
 
 ### From Your Host PC
-1. Use the VM's IP address: **http://172.30.88.228:8080/guacamole/**
-   *(Note: If this doesn't work, ensure your VM's network is set to "Bridged" or check if you have a VPN/Tailscale IP like 100.66.224.55)*
-2. Login with `guacadmin` / `guacadmin`.
-3. Configure your connections (RDP, VNC, SSH) in the Guacamole settings.
+1. Use the VM's Tailscale IP address: **http://100.66.224.55:8080/guacamole/**
+   *(Verified: Access via Tailscale IP works. VM IP 172.30.88.228 might require bridged networking.)*
 2. Login with default credentials:
     - Username: `guacadmin`
     - Password: `guacadmin`
 3. **IMPORTANT**: Change the password immediately after logging in.
+4. Configure your connections (RDP, VNC, SSH) in the Guacamole settings.
 
 ## Troubleshooting
 If you cannot access the page:
