@@ -2,6 +2,8 @@ services:
   guacd:
     image: guacamole/guacd
     restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   postgres:
     image: postgres:15

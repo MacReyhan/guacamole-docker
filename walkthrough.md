@@ -36,7 +36,24 @@ I have installed Apache Guacamole using Docker Compose. This setup includes:
     - Username: `guacadmin`
     - Password: `guacadmin`
 3. **IMPORTANT**: Change the password immediately after logging in.
-4. Configure your connections (RDP, VNC, SSH) in the Guacamole settings.
+4. **Connection Configured**: I have automatically created a connection named **"Windows Host"**.
+   - **Protocol**: RDP
+   - **Hostname**: `host.docker.internal` (points to your host PC)
+   - **Port**: 3389
+   - **Security**: NLA (Ignore Cert)
+   - **Credentials**: You will be prompted to enter your Windows username and password when you click on the connection.
+
+4. **Performance Settings**:
+   - Visual effects (Wallpaper, Theming, Animations) are **Disabled** by default to ensure smooth performance.
+   - If stuttering persists, try lowering Color Depth to 16-bit.
+
+5. **To Connect**:
+   - Go to [Home](http://localhost:8080/guacamole/#/)
+   - Click on **"Windows Host"**
+   - Enter your PC credentials if asked.
+
+> [!NOTE]
+> If connection fails, ensure Remote Desktop is enabled on your Windows PC and your user account has permission to connect remotely.
 
 ## Troubleshooting
 If you cannot access the page:
